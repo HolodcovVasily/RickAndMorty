@@ -1,0 +1,86 @@
+// /* COLORS */
+$color-primary: #00B0C8;
+$color-secondary: #526E2DFF;
+$color-tertiary: #FCF961;
+$color-light: #FAFD7C99;
+$color-medium: #dd5c1199;
+$color-dark: #24325FFF;
+
+// /* SHADOWS */
+$shadow-card: 2px 2px 5px 7px $color-secondary;
+$shadow-modal: 2px 2px 5px 10px $color-secondary;
+
+/* FONTS */
+$font-basic: Roboto, Arial, sans-serif;
+$font-emphatic: 'Roboto Slab', serif;
+
+// /* FONT WEIGHT */
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+/* FONT SIZE */
+$xs: 0.875rem;
+$s: 1rem;
+$m: 1.125rem;
+$l: 1.25rem;
+$xl: 1.5rem;
+
+/* BREAKPOINTS */
+$tablet: 768px;
+$desktop: 1200px;
+
+@mixin tablet {
+    @media all and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media all and (min-width: $desktop) {
+        @content;
+    }
+}
+
+
+.person__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    &_image {
+        @include tablet {
+            transform: scale(0.9);
+        }
+    }
+
+    &_list {
+        padding-left: 20px;
+        font-family: $font-basic;
+        color: $color-primary;
+        font-weight: $regular;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.person__list_name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: $bold;
+    color: $color-dark;
+    font-size: $l;
+    margin-bottom: 10px;
+}
+
+.person__button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.person__button_close {
+    width: 20px;
+    height: 20px;
+}

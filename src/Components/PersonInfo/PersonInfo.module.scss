@@ -45,10 +45,18 @@ $desktop: 1200px;
 
 .person__container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
 
+    @include tablet {
+        flex-direction: row;
+    }
+
+
     &_image {
+
+        align-self:center;
+
         @include tablet {
             transform: scale(0.9);
         }
@@ -74,13 +82,3 @@ $desktop: 1200px;
     margin-bottom: 10px;
 }
 
-.person__button {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-
-.person__button_close {
-    width: 20px;
-    height: 20px;
-}

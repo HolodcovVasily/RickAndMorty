@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <Header title={"Rick and Morty"} />
-      <div className="container mx-auto max-w-2xl pt-5 h-screen">
+      <div className="container mx-auto max-w-2xl pt-5 px-5 h-screen">
         {loading && (
           <MutatingDots
             height="100"

@@ -37,7 +37,7 @@ function App() {
             radius="12.5"
             ariaLabel="mutating-dots-loading"
             wrapperStyle={{ justifyContent: "center" }}
-            wrapperClass=""
+            wrapperClass="fixed top-[50%] z-100 left-1/2 -translate-x-1/2"
             visible={true}
           />
         )}
@@ -60,7 +60,7 @@ function App() {
             <PersonInfo onClose={modalClose} person={person} />
           </Modal>
         )}
-        <ToTopButton />
+        {!modal && <ToTopButton />}
       </div>
     </>
   );
